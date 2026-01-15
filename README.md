@@ -14,6 +14,7 @@ A complete object detection system using YOLOv8 fine-tuned on the Pascal VOC dat
 - [Usage](#usage)
 - [Results](#results)
 - [Project Structure](#project-structure)
+- [Using Your Own YOLO Model](#Using-Your-Own-YOLO-Model)  <--- IMPORTANT
 
 ---
 
@@ -119,11 +120,6 @@ Training Time: 2.45 hours
 - Random scaling: ±50%
 - Translation: ±10%
 
-**Training Platform:**
-- Kaggle Notebooks with Tesla T4 GPU
-- 16GB GPU memory
-- Free tier compute hours
-
 ---
 
 ## 🖥️ Desktop Application
@@ -198,7 +194,7 @@ A modern, dark-themed desktop application built with Python Tkinter for easy obj
 ```bash
 git clone https://github.com/drisskhattabi6/YOLO-Object-Detection.git
 cd YOLO-Object-Detection
-````
+```
 
 ---
 
@@ -289,7 +285,7 @@ Make sure the virtual environment is activated before running the app.
 
 ## 📈 Results
 
-### Model Performance (After fine-tuning) 
+### Model Performance (of the default model (the fine-tuned model)) 
 
 **Overall Metrics:**
 - **mAP50:** 68.77%
@@ -353,6 +349,73 @@ Adjust in the application:
 
 - Solution: Check camera permissions
 - Try different camera index in code
+
+---
+
+## 🔄 Using Your Own YOLO Model
+
+This application is **not limited to a single YOLO model**.  
+You can use it to **test, validate, and visualize predictions** from **any Ultralytics YOLO `.pt` model**.
+
+---
+
+### ❓ Can I use a different YOLO version?
+
+✅ **YES**, as long as the model is in **Ultralytics `.pt` format**
+
+Supported:
+- YOLOv5
+- YOLOv8
+- YOLOv9
+- YOLOv10
+- YOLOv11
+
+Not supported directly:
+- YOLOv3 / YOLOv4 (Darknet format)
+
+---
+
+### ❓ Can I use another model trained on the same dataset (Pascal VOC)?
+
+✅ **YES — fully compatible**
+
+You can use:
+- Different model sizes (nano, small, medium, large)
+- Different training runs or checkpoints
+- Different epochs or hyperparameters
+
+No changes are required.
+
+---
+
+### ❓ Can I use a model trained on a different dataset (COCO or custom)?
+
+✅ **YES — no code changes needed**
+
+- The app **automatically reads class names from the model file**
+- Works with:
+  - COCO (80 classes)
+  - Pascal VOC (20 classes)
+  - Custom datasets (any number of classes)
+
+ℹ️ The `voc_classes` list in the code is **for documentation only** and is **not used during inference**.
+
+---
+
+### ✅ Summary
+
+This app is **fully dynamic**.  
+When you load a `.pt` model, the application will automatically:
+
+- Detect the number of classes
+- Detect class names
+- Display predictions correctly
+
+**Examples:**
+- COCO model → displays 80 classes (person, car, dog, etc.)
+- Custom 5-class model → displays your 5 custom classes
+- Pascal VOC model → displays 20 VOC classes
+
 
 ---
 

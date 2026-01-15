@@ -5,7 +5,6 @@ import cv2
 import threading
 from pathlib import Path
 import time
-import os
 
 try:
     from ultralytics import YOLO
