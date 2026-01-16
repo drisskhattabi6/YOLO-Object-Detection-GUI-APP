@@ -12,6 +12,7 @@ A focused, user-friendly **desktop application** (Tkinter) for running inference
 * [Usage](#usage)
 * [Using Your Own YOLO Model](#using-your-own-yolo-model)
 * [Project Structure](#project-structure)
+* [Examples](#Examples)
 * [Troubleshooting](#troubleshooting)
 * [License & Acknowledgments](#license--acknowledgments)
 
@@ -145,6 +146,16 @@ YOLODetectorApp/
 ├── README.md
 └── requirements.txt
 ```
+
+---
+
+# Examples
+
+![](imgs/img2.png)
+
+![](imgs/img3.png)
+
+![](imgs/img4.png)
 
 ---
 
