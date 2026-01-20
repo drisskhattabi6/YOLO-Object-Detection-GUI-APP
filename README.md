@@ -49,8 +49,8 @@ This is a **desktop application** for fast, visual testing of YOLO models. It’
 ### Clone repo
 
 ```bash
-git clone https://github.com/drisskhattabi6/YOLO-Object-Detection.git
-cd YOLO-Object-Detection
+git clone https://github.com/drisskhattabi6/YOLO-Object-Detection-GUI-APP
+cd YOLO-Object-Detection-GUI-APP
 ```
 
 ### Create & activate virtual environment
