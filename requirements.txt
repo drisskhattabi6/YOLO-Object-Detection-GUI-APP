@@ -1,4 +1,4 @@
 ultralytics
 opencv-python
 pillow
-tkinter
+tk
